@@ -1,6 +1,8 @@
 package com.ernesto.todailybackend.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
 
@@ -8,6 +10,7 @@ import java.util.Date;
 public class Task {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String ID;
     private String title;
     private String description;
