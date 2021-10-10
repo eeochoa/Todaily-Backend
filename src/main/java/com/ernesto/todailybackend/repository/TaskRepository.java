@@ -5,8 +5,9 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.Date;
 
+
 public interface TaskRepository extends CrudRepository<Task, String> {
 
-    Task findTodoByID(String taskId);
-    Task findTodoByDate(Date date);
+    Task findTaskById(String taskId);
+    //Task findTodoByDate(Date date);
 }

@@ -11,17 +11,17 @@ public class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String ID;
+    private String id;
     private String title;
     private String description;
     private String status;
-    private Date time;
-    private Date date;
+    private String time;
+    private String date;
 
     public Task(){}
 
-    public Task(String id, String title, String description, String status, Date time, Date date){
-        this.ID = id;
+    public Task(String Id, String title, String description, String status, String time, String date){
+        this.id = Id;
         this.title = title;
         this.description = description;
         this.status = status;
@@ -29,27 +29,27 @@ public class Task {
         this.date = date;
     }
 
-    public Task(String id, String title, String description, Date time, Date date){
-        this.ID = id;
+    public Task(String Id, String title, String description, String time, String date){
+        this.id = Id;
         this.title = title;
         this.description = description;
         this.time = time;
         this.date = date;
     }
 
-    public Task(String id, String title, Date time, Date date){
-        this.ID = id;
+    public Task(String Id, String title, String time, String date){
+        this.id = Id;
         this.title = title;
         this.time = time;
         this.date = date;
     }
 
-    public String getID() {
-        return ID;
+    public String getId() {
+        return id;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
+    public void setId(String ID) {
+        this.id = ID;
     }
 
     public String getTitle() {
@@ -76,19 +76,19 @@ public class Task {
         this.status = status;
     }
 
-    public Date getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Date time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

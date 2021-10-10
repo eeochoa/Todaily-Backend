@@ -14,6 +14,10 @@ public class TaskServices {
     @Autowired
     private TaskRepository taskRepository;
 
+    public TaskServices(){
+
+    }
+
     public List<Task> getAllTasks(){
         List<Task> tasks = new ArrayList<>();
         taskRepository.findAll().forEach(tasks::add);
@@ -23,6 +27,15 @@ public class TaskServices {
 
     public void addTask(Task task){
         taskRepository.save(task);
+    }
+
+    public void updateTask(String id, Task task){
+        task.setId(id);
+        taskRepository.save(task);
+    }
+
+    public void deleteAll(){
+        taskRepository.deleteAll();
     }
 
 }
