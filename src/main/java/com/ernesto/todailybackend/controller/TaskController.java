@@ -21,13 +21,13 @@ public class TaskController {
 
         @RequestMapping(method = RequestMethod.POST, value = "/tasks/{Id}")
         public void addTask(@RequestBody Task task){
-            System.out.println(task);
+            System.out.println(task.getTitle());
             taskServices.addTask(task);
         }
 
         @RequestMapping(method = RequestMethod.PUT, value = "/tasks/{Id}")
         public void updateTask(@PathVariable String id, @RequestBody Task task){
-            System.out.println(task);
+            System.out.println(task.getTitle());
             taskServices.updateTask(id, task);
         }
 
